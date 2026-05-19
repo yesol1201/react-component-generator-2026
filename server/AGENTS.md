@@ -51,5 +51,5 @@ const code = ensureRenderCall(stripCodeFences(text));
 
 **Don'ts:**
 - `SYSTEM_PROMPT` 내용에서 "인라인 스타일", "import 없음", "render() 필수" 세 조건을 제거하지 마라 — react-live 샌드박스 실행에 필수.
-- API 응답을 스트리밍으로 변경하지 마라 — 프론트엔드가 전체 코드를 한 번에 수신하는 것을 가정함.
+- 스트리밍 응답 형식(`encodeChunk` / `encodeDone`)을 임의로 변경하지 마라 — 클라이언트의 `parseStreamChunk`와 쌍으로 동작함.
 - `port: 3002`를 임의로 변경하지 마라 — `vite.config.ts` 프록시 설정과 연동됨.
