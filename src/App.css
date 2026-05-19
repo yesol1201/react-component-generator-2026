@@ -410,6 +410,20 @@
   color: var(--text-soft);
 }
 
+.prompt-textarea-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.prompt-char-count {
+  align-self: flex-end;
+  margin-top: 4px;
+  font-size: 0.78rem;
+  color: var(--text-soft);
+  user-select: none;
+}
+
 .btn-generate {
   height: 52px;
   padding: 0 22px;

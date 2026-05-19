@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(timeout 25 tail -f \"C:\\\\Users\\\\MASOCA~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-masocampus-Desktop-react-component-generator-main\\\\e4ecb1e1-3102-4fa3-a902-ecc82a623555\\\\tasks\\\\busvju75r.output\")",
+      "Skill(pr-create)",
+      "Skill(update-config)"
+    ]
+  }
+}

@@ -1,5 +1,44 @@
 {
   "enabledPlugins": {
     "frontend-design@claude-plugins-official": true
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "powershell",
+            "command": "powershell -NoProfile -ExecutionPolicy Bypass -File .claude/hooks/check-test.ps1"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "deny": [
+      "Read(.env*)",
+      "Read(*credentials*)",
+      "Read(*secrets*)",
+      "Read(*password*)",
+      "Read(*api_key*)",
+      "Read(*api-key*)",
+      "Read(*.pem)",
+      "Read(*.key)",
+      "Read(*.p12)",
+      "Read(*.pfx)",
+      "Read(*service_account*)",
+      "Read(.npmrc)",
+      "Read(.netrc)",
+      "Bash(cat .env*)",
+      "Bash(cat *credentials*)",
+      "Bash(cat *secrets*)",
+      "Bash(cat *password*)",
+      "Bash(cat *.pem)",
+      "Bash(cat *.key)",
+      "Bash(printenv)",
+      "Bash(env)"
+    ]
   }
 }
